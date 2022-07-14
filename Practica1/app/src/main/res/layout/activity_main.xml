@@ -7,51 +7,57 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/txtNum2"
+        android:id="@+id/txt_num2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="Número2"
+        android:hint="@string/numero2"
         android:inputType="number"
+        android:textColorHint="#78909C"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNum1" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_num1"
+        android:autofillHints="" />
 
     <EditText
-        android:id="@+id/txtNum1"
+        android:id="@+id/txt_num1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="Número1"
+        android:hint="@string/numero1"
         android:inputType="number"
+        android:textColorHint="#78909C"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <Button
-        android:id="@+id/btn_Calcular"
+        android:id="@+id/btn_sumar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"
-        android:text="Calcular"
+        android:onClick="Sumar"
+        android:text="@string/sumar"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_resultado" />
 
     <TextView
-        android:id="@+id/txtResultado"
+        android:id="@+id/txt_resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"
-        android:hint="Resultado"
-        android:textSize="24sp"
+        android:hint="@string/resultado"
+        android:textColorHint="#78909C"
+        android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNum2" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_num2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

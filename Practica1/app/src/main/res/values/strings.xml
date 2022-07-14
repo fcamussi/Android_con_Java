@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Practica1</string>
+    <string name="numero2">Número2</string>
+    <string name="numero1">Número1</string>
+    <string name="resultado">Resultado</string>
+    <string name="sumar">Sumar</string>
 </resources>
