@@ -10,4 +10,4 @@
 
 ## Práctica 3
 
-![screenshot3](https://user-images.githubusercontent.com/75378876/179241239-252aee19-dd6b-4292-b6f8-c29d399c25d5.png)
+![screenshot3](https://user-images.githubusercontent.com/75378876/179242706-98aa5f47-bdba-4e96-8513-b1a7c38599c2.png)
