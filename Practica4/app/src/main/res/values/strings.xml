@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Practica4</string>
+    <string name="button">Calcular</string>
+    <string name="resultado">Resultado</string>
+    <string name="numero2">Número2</string>
+    <string name="numero1">Número1</string>
+</resources>
