@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Practica3</string>
+    <string name="norte">Norte</string>
+    <string name="sur">Sur</string>
+    <string name="este">Este</string>
+    <string name="oeste">Oeste</string>
+    <string name="marcar_todo">Marcar todo</string>
+    <string name="desmarcar_todo">Desmarcar todo</string>
+</resources>
