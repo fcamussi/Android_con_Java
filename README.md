@@ -14,4 +14,4 @@
 
 ## Práctica 4
 
-![screenshot](https://user-images.githubusercontent.com/75378876/179271483-c8a74672-d2b6-45c4-b91e-b528e54823d0.png)
+![screenshot4](https://user-images.githubusercontent.com/75378876/179272427-09ba908b-1630-4044-800a-262dbe2880f2.png)
