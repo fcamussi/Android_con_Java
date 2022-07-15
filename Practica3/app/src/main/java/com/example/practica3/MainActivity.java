@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,11 +28,13 @@ public class MainActivity extends AppCompatActivity {
         for (CheckBox x: cb) {
             x.setChecked(true);
         }
+        Toast.makeText(this, "Se marcaron todos", Toast.LENGTH_SHORT).show();
     }
 
     public void onClickDesmarcarTodo(View view) {
         for (CheckBox x: cb) {
             x.setChecked(false);
         }
+        Toast.makeText(this, "Se desmarcaron todos", Toast.LENGTH_SHORT).show();
     }
 }
