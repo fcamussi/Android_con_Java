@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/custom_spinner_item.xml" value="0.2462962962962963" />
         <entry key="app/src/main/res/layout/custom_spinner_item_.xml" value="0.3645833333333333" />
         <entry key="app/src/main/res/layout/spinner_item_custom.xml" value="0.36354166666666665" />
       </map>
