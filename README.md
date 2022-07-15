@@ -19,3 +19,7 @@
 ## Práctica 5
 
 ![screenshot5](https://user-images.githubusercontent.com/75378876/179312440-528b5ee7-573d-4042-bfb8-b7084cd82faf.png)
+
+## Práctica 6
+
+![screenshot6](https://user-images.githubusercontent.com/75378876/179320446-965f0bf1-4959-49b5-96cb-524640c1cb80.png)
