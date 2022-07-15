@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Practica2</string>
+    <string name="manana">Mañana</string>
+    <string name="tarde">Tarde</string>
+    <string name="noche">Noche</string>
+    <string name="saludo">Saludo</string>
+</resources>
