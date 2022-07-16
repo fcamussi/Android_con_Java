@@ -26,4 +26,4 @@
 
 ## Práctica 7
 
-![screenshot7](https://user-images.githubusercontent.com/75378876/179360709-9f08774d-cc2f-493c-9492-a40a7d8cba31.png)
+![screenshot7](https://user-images.githubusercontent.com/75378876/179364679-87f984b9-c40a-4de6-a286-b14ce1320391.png)
