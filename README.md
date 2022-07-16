@@ -23,3 +23,7 @@
 ## Práctica 6
 
 ![screenshot6](https://user-images.githubusercontent.com/75378876/179320446-965f0bf1-4959-49b5-96cb-524640c1cb80.png)
+
+## Práctica 7
+
+![screenshot7](https://user-images.githubusercontent.com/75378876/179360709-9f08774d-cc2f-493c-9492-a40a7d8cba31.png)
