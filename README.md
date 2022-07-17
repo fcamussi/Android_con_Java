@@ -28,3 +28,7 @@
 
 ![screenshot1](https://user-images.githubusercontent.com/75378876/179370930-2529cfb6-949c-4d8e-9391-715bcecc86f4.png) |
 ![screenshot2](https://user-images.githubusercontent.com/75378876/179370931-a7cc08d7-ad28-40a1-98a4-374f1e778716.png)
+
+## Práctica 8
+![screenshot8](https://user-images.githubusercontent.com/75378876/179418010-6a34bebf-8ac0-4a9f-a37f-0afccbb5ce23.png)
+
