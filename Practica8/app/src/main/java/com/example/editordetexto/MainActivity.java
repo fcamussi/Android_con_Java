@@ -9,7 +9,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +31,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickCargar(View view) {
-        Toast.makeText(this, "HOLA", Toast.LENGTH_SHORT);
+        String fichero = etFichero.getText().toString();
+        try {
+            String texto = "";
+            InputStreamReader isr = new InputStreamReader(openFileInput(fichero));
+            BufferedReader br = new BufferedReader(isr);
+            String linea = br.readLine();
+            while(linea != null) {
+                texto = texto + linea + "\n";
+                linea = br.readLine();
+            }
+            br.close();
+            isr.close();
+            etTexto.setText(texto);
+        } catch(IOException e) {
+            Toast.makeText(this, "Error abriendo " + fichero, Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void onClickGuardar(View view) {
@@ -37,11 +54,11 @@ public class MainActivity extends AppCompatActivity {
         try {
             OutputStreamWriter osw = new OutputStreamWriter(openFileOutput(fichero, Activity.MODE_PRIVATE));
             osw.write(etTexto.getText().toString());
-            osw.flush();
             osw.close();
+            Toast.makeText(this, fichero + " guardado", Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
+            Toast.makeText(this, "Error guardando " + fichero, Toast.LENGTH_SHORT).show();
         }
-        Toast.makeText(this, "Fichero " + fichero + " guardado", Toast.LENGTH_SHORT);
     }
 
 }
