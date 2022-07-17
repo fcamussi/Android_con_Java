@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Editor de texto</string>
+    <string name="cargar">Cargar</string>
+    <string name="guardar">Guardar</string>
+    <string name="fichero">Fichero</string>
+    <string name="sd">SD</string>
+</resources>
