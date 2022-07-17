@@ -4,13 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
@@ -32,9 +35,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickCargar(View view) {
         String fichero = etFichero.getText().toString();
+        FileInputStream fis;
+
         try {
+            if (cbSD.isChecked()) {
+                String rutaSD = Environment.getExternalStorageDirectory().getPath();
+                fis = new FileInputStream(new File(rutaSD, fichero));
+            } else {
+                fis = openFileInput(fichero);
+            }
             String texto = "";
-            InputStreamReader isr = new InputStreamReader(openFileInput(fichero));
+            InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader br = new BufferedReader(isr);
             String linea = br.readLine();
             while(linea != null) {
@@ -44,19 +55,27 @@ public class MainActivity extends AppCompatActivity {
             br.close();
             isr.close();
             etTexto.setText(texto);
-        } catch(IOException e) {
+        } catch(Exception e) {
             Toast.makeText(this, "Error abriendo " + fichero, Toast.LENGTH_SHORT).show();
         }
     }
 
     public void onClickGuardar(View view) {
         String fichero = etFichero.getText().toString();
+        FileOutputStream fos;
+
         try {
-            OutputStreamWriter osw = new OutputStreamWriter(openFileOutput(fichero, Activity.MODE_PRIVATE));
+            if (cbSD.isChecked()) {
+                String rutaSD = Environment.getExternalStorageDirectory().getPath();
+                fos = new FileOutputStream(new File(rutaSD, fichero));
+            } else {
+                fos = openFileOutput(fichero, Activity.MODE_PRIVATE);
+            }
+            OutputStreamWriter osw = new OutputStreamWriter(fos);
             osw.write(etTexto.getText().toString());
             osw.close();
             Toast.makeText(this, fichero + " guardado", Toast.LENGTH_SHORT).show();
-        } catch (IOException e) {
+        } catch (Exception e) {
             Toast.makeText(this, "Error guardando " + fichero, Toast.LENGTH_SHORT).show();
         }
     }
