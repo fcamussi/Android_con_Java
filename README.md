@@ -35,4 +35,4 @@
 ## Práctica 9: AdminSQLiteOpenHelper, SQLiteDatabase (crear tabla, buscar, insertar, actualizar y eliminar registros)
 ![screenshot9](https://user-images.githubusercontent.com/75378876/179555508-7fb2193e-5fbf-412a-8950-8552e30cc955.png)
 
-## Práctica 10: ScrollView, Icono, Colores (https://www.materialpalette.com)
+## Práctica 10: ScrollView, Icono, Colores (http://mcg.mbitson.com)
