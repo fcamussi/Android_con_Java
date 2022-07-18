@@ -36,12 +36,16 @@ public class MainActivity extends AppCompatActivity {
             registro.put("CODIGO", codigo);
             registro.put("DESCRIPCION", desc);
             registro.put("PRECIO", precio);
-            BD.insert("PRODUCTOS", null, registro);
+            long res = BD.insert("PRODUCTOS", null, registro);
             BD.close();
-            etCodigo.setText("");
-            etDesc.setText("");
-            etPrecio.setText("");
-            Toast.makeText(this, "Producto registrado", Toast.LENGTH_SHORT).show();
+            if (res >= 0) {
+                etCodigo.setText("");
+                etDesc.setText("");
+                etPrecio.setText("");
+                Toast.makeText(this, "Producto registrado", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "El producto ya existe", Toast.LENGTH_SHORT).show();
+            }
         } else {
             Toast.makeText(this, "Faltan campos", Toast.LENGTH_SHORT).show();
         }
@@ -59,9 +63,32 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "No existe el producto", Toast.LENGTH_SHORT).show();
             }
+            cursor.close();
             BD.close();
         } else {
             Toast.makeText(this, "Falta código", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void onCreateModificar(View view) {
+        String codigo = etCodigo.getText().toString();
+        String desc = etDesc.getText().toString();
+        String precio = etPrecio.getText().toString();
+        if (!codigo.isEmpty() && !desc.isEmpty() && !precio.isEmpty()) {
+            SQLiteDatabase BD = admin.getWritableDatabase();
+            ContentValues registro = new ContentValues();
+            registro.put("CODIGO", codigo);
+            registro.put("DESCRIPCION", desc);
+            registro.put("PRECIO", precio);
+            int n = BD.update("PRODUCTOS", registro, "CODIGO=" + codigo, null);
+            BD.close();
+            if (n > 0) {
+                Toast.makeText(this, "Producto modificado", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "No existe el producto", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(this, "Faltan campos", Toast.LENGTH_SHORT).show();
         }
     }
 

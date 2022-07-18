@@ -4,7 +4,7 @@
     <string name="descripcion">Descripción</string>
     <string name="precio">Precio</string>
     <string name="registrar">Registrar</string>
-    <string name="buscar">Buscar</string>
+    <string name="consultar">Consultar</string>
     <string name="modificar">Modificar</string>
     <string name="eliminar">Eliminar</string>
 </resources>
