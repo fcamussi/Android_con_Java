@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Practica10</string>
+    <string name="armadillo">armadillo</string>
+    <string name="ballena">ballena</string>
+    <string name="cangrejo">cangrejo</string>
+    <string name="cerdo">cerdo</string>
+    <string name="pollito">pollito</string>
+    <string name="tigre">tigre</string>
+    <string name="toro">toro</string>
+    <string name="zorro">zorro</string>
+    <string name="panda">panda</string>
+</resources>
