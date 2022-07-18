@@ -33,4 +33,4 @@
 ![screenshot8](https://user-images.githubusercontent.com/75378876/179418010-6a34bebf-8ac0-4a9f-a37f-0afccbb5ce23.png)
 
 ## Práctica 9
-![screenshot9](https://user-images.githubusercontent.com/75378876/179554778-f8cb482d-b722-4386-97b2-abdc253b4f92.png)
+![screenshot9](https://user-images.githubusercontent.com/75378876/179555508-7fb2193e-5fbf-412a-8950-8552e30cc955.png)
