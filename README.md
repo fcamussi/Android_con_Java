@@ -16,9 +16,8 @@
 
 ![screenshot4](https://user-images.githubusercontent.com/75378876/179272427-09ba908b-1630-4044-800a-262dbe2880f2.png)
 
-## Práctica 5: ListView
-
-![screenshot5](https://user-images.githubusercontent.com/75378876/179312440-528b5ee7-573d-4042-bfb8-b7084cd82faf.png)
+## Práctica 5: ListView, ArrayAdapter
+![screenshot5](https://user-images.githubusercontent.com/75378876/180576218-f53b509a-c463-487b-9375-6429e2e4fa02.png)
 
 ## Práctica 6: ImageButton
 
