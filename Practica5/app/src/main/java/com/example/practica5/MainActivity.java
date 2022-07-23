@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv;
     private EditText et;
     private ListView lv;
-    private ArrayList<String> colores;
-    private ArrayAdapter<String> adapter;
+    private ArrayList<Color> colores;
+    private ColorAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,25 +27,25 @@ public class MainActivity extends AppCompatActivity {
         tv = findViewById(R.id.tv);
         et = findViewById(R.id.et);
         lv = findViewById(R.id.lv);
-        colores = new ArrayList<>();
 
-        adapter = new ArrayAdapter<>(this,
-                R.layout.custom_list_item, colores);
+        colores = new ArrayList<>();
+        adapter = new ColorAdapter(this, colores);
         lv.setAdapter(adapter);
-        adapter.add("Rojo");
-        adapter.add("Verde");
-        adapter.add("Azul");
+        adapter.add(new Color("Rojo"));
+        adapter.add(new Color("Verde"));
+        adapter.add(new Color("Azul"));
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                tv.setText(lv.getItemAtPosition(i).toString());
+                tv.setText(colores.get(i).getColor());
             }
         });
     }
 
     public void onClickAgregar(View view) {
-        adapter.add(et.getText().toString());
+        Color color = new Color(et.getText().toString());
+        adapter.add(color);
     }
 
 }

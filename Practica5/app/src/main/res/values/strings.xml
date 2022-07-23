@@ -2,4 +2,5 @@
     <string name="app_name">Practica5</string>
     <string name="color">Color</string>
     <string name="agregar">Agregar</string>
+    <string name="seleccion">Selección:</string>
 </resources>
