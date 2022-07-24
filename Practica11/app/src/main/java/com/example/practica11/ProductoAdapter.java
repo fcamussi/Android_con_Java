@@ -12,6 +12,12 @@ import java.util.ArrayList;
 
 public class ProductoAdapter extends ArrayAdapter<Producto> {
 
+    private static class ViewHolder {
+        TextView tvCodigo;
+        TextView tvDesc;
+        TextView tvPrecio;
+    }
+
     public ProductoAdapter(Context context, ArrayList<Producto> productos) {
         super(context, 0, productos);
     }
@@ -19,15 +25,21 @@ public class ProductoAdapter extends ArrayAdapter<Producto> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Producto producto = getItem(position);
+        ViewHolder viewHolder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_producto, parent, false);
+            viewHolder = new ViewHolder();
+            LayoutInflater inflater = LayoutInflater.from(getContext());
+            convertView = inflater.inflate(R.layout.item_producto, parent, false);
+            viewHolder.tvCodigo = convertView.findViewById(R.id.tvCodigo);
+            viewHolder.tvDesc = convertView.findViewById(R.id.tvDesc);
+            viewHolder.tvPrecio = convertView.findViewById(R.id.tvPrecio);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder)convertView.getTag();
         }
-        TextView tvCodigo = convertView.findViewById(R.id.tvCodigo);
-        TextView tvDesc = convertView.findViewById(R.id.tvDesc);
-        TextView tvPrecio = convertView.findViewById(R.id.tvPrecio);
-        tvCodigo.setText(String.valueOf(producto.getCodigo()));
-        tvDesc.setText(producto.getDesc());
-        tvPrecio.setText(String.valueOf(producto.getPrecio()));
+        viewHolder.tvCodigo.setText(String.valueOf(producto.getCodigo()));
+        viewHolder.tvDesc.setText(producto.getDesc());
+        viewHolder.tvPrecio.setText(String.valueOf(producto.getPrecio()));
         return convertView;
     }
 

@@ -14,7 +14,7 @@
         android:hint="@string/codigo"
         android:textColor="@color/black"
         android:textColorHint="#78909C"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +28,7 @@
         android:hint="@string/descripcion"
         android:textColor="@color/black"
         android:textColorHint="#78909C"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCodigo" />
@@ -43,7 +43,7 @@
         android:hint="@string/precio"
         android:textColor="@color/black"
         android:textColorHint="#78909C"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etPrecio;
     private ArrayList<Producto> productos;
     private ProductoAdapter adapter;
+    AdminSQLiteOpenHelper admin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
         String precio = etPrecio.getText().toString();
         if (!codigo.isEmpty() && !desc.isEmpty() && !precio.isEmpty()) {
             Producto producto = new Producto(codigo, desc, precio);
+/*
+            SQLiteDatabase BD = admin.getWritableDatabase(); // Abre la base de datos
+            ContentValues registro = new ContentValues();
+            registro.put("CODIGO", codigo);
+            registro.put("DESCRIPCION", desc);
+            registro.put("PRECIO", precio);
+            long res = BD.insert("PRODUCTOS", null, registro);
+            BD.close();
+ */
             adapter.add(producto);
             if (true) {
                 etCodigo.setText("");
