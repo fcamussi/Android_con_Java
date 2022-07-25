@@ -39,3 +39,6 @@
 
 ## Práctica 11: ListView, SQLiteOpenHelper, SQLiteDatabase, CursorAdapter
 ![screenshot11](https://user-images.githubusercontent.com/75378876/180689247-7dc80808-c95a-4c0e-b4b2-3db2390e423f.png)
+
+## Práctica 12: RecyclerView, RecyclerAdapter
+![screenshot12](https://user-images.githubusercontent.com/75378876/180690857-d7590340-5470-4b2a-b5fe-d0ad8e04a323.png)
