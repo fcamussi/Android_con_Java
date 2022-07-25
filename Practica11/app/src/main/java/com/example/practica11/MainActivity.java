@@ -3,6 +3,7 @@ package com.example.practica11;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -10,17 +11,16 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
 
     private ListView lv;
     private EditText etCodigo;
     private EditText etDesc;
     private EditText etPrecio;
-    private ArrayList<Producto> productos;
-    private ProductoAdapter adapter;
+    private ProductoCursorAdapter adapter;
     AdminSQLiteOpenHelper admin;
+    SQLiteDatabase BD;
+    Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +32,18 @@ public class MainActivity extends AppCompatActivity {
         etDesc = findViewById(R.id.etDesc);
         etPrecio = findViewById(R.id.etPrecio);
 
-        productos = new ArrayList<>();
-        adapter = new ProductoAdapter(this, productos);
+        admin = new AdminSQLiteOpenHelper(this, "BD", null, 1);
+        BD = admin.getWritableDatabase();
+        actualizarCursor();
+        adapter = new ProductoCursorAdapter(this, cursor);
         lv.setAdapter(adapter);
-        adapter.add(new Producto("1", "Teclado USB", "33.50"));
-        adapter.add(new Producto("2", "Mouse USB", "20.00"));
-        adapter.add(new Producto("3", "Pendrive 32GB", "25.50"));
+    }
+
+    public void actualizarCursor() {
+        cursor = BD.rawQuery("SELECT * FROM PRODUCTOS", null);
+        if (adapter != null) {
+            adapter.changeCursor(cursor);
+        }
     }
 
     public void onClickAgregar(View view) {
@@ -45,18 +51,14 @@ public class MainActivity extends AppCompatActivity {
         String desc = etDesc.getText().toString();
         String precio = etPrecio.getText().toString();
         if (!codigo.isEmpty() && !desc.isEmpty() && !precio.isEmpty()) {
-            Producto producto = new Producto(codigo, desc, precio);
-/*
-            SQLiteDatabase BD = admin.getWritableDatabase(); // Abre la base de datos
             ContentValues registro = new ContentValues();
             registro.put("CODIGO", codigo);
             registro.put("DESCRIPCION", desc);
             registro.put("PRECIO", precio);
             long res = BD.insert("PRODUCTOS", null, registro);
-            BD.close();
- */
-            adapter.add(producto);
-            if (true) {
+            actualizarCursor();
+
+            if (res > 0) {
                 etCodigo.setText("");
                 etDesc.setText("");
                 etPrecio.setText("");
