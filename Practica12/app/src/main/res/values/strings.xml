@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Practica12</string>
+    <string name="localidad">Localidad</string>
+    <string name="pais">País</string>
+    <string name="pais_etiq">País:</string>
+    <string name="localidad_etiq">Localidad:</string>
+    <string name="nombre">Nombre</string>
+</resources>
