@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Practica14</string>
+    <string name="message">Hola! Soy un Popup! </string>
+    <string name="popup_1">Popup 1</string>
+    <string name="popup_2">POPUP 2</string>
+</resources>
