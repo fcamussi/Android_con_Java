@@ -25,8 +25,8 @@
 
 ## Práctica 7: SharedPreferences, Intent (cambiar de Activity y pasar parámetros), WebView
 
-![screenshot1](https://user-images.githubusercontent.com/75378876/179370930-2529cfb6-949c-4d8e-9391-715bcecc86f4.png) |
-![screenshot2](https://user-images.githubusercontent.com/75378876/179370931-a7cc08d7-ad28-40a1-98a4-374f1e778716.png)
+![screenshot7a](https://user-images.githubusercontent.com/75378876/179370930-2529cfb6-949c-4d8e-9391-715bcecc86f4.png) |
+![screenshot7b](https://user-images.githubusercontent.com/75378876/179370931-a7cc08d7-ad28-40a1-98a4-374f1e778716.png)
 
 ## Práctica 8: Multiline Text, Almacenamiento interno y externo, Pedir permiso WRITE_EXTERNAL_STORAGE
 ![screenshot8](https://user-images.githubusercontent.com/75378876/179418010-6a34bebf-8ac0-4a9f-a37f-0afccbb5ce23.png)
@@ -45,3 +45,7 @@
 
 ## Práctica 13: ActionBar, ActionButtons
 ![screenshot13](https://user-images.githubusercontent.com/75378876/180844983-f3543412-4dff-479e-b917-e0c3e9d00fd8.png)
+
+## Práctica 14: Dialog, AlertDialog
+![screenshot14a](https://user-images.githubusercontent.com/75378876/180882700-d565fa06-5dd6-49a4-9186-b93f55a18041.png)
+![screenshot14b](https://user-images.githubusercontent.com/75378876/180882703-52bcaf53-ccb5-466d-96c5-594914b3d945.png)
