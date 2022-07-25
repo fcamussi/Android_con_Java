@@ -14,7 +14,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase BD) {
-        BD.execSQL("CREATE TABLE PRODUCTOS(_id INTEGER PRIMARY KEY AUTOINCREMENT, CODIGO INT, DESCRIPCION TEXT, PRECIO REAL)");
+        BD.execSQL("CREATE TABLE PRODUCTOS(CODIGO INT PRIMARY KEY, DESCRIPCION TEXT, PRECIO REAL)");
     }
 
     @Override

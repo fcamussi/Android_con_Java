@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void actualizarCursor() {
-        cursor = BD.rawQuery("SELECT * FROM PRODUCTOS", null);
+        cursor = BD.rawQuery("SELECT CODIGO AS _id,CODIGO,DESCRIPCION,PRECIO FROM PRODUCTOS", null);
         if (adapter != null) {
             adapter.changeCursor(cursor);
         }
