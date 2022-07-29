@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Practica15</string>
+    <string name="iniciar_servicio">Iniciar servicio</string>
+    <string name="detener_servicio">Detener servicio</string>
+    <string name="mensaje">Mensaje</string>
+    <string name="enviar">Enviar</string>
+</resources>
