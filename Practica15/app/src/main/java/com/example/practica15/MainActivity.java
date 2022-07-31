@@ -2,7 +2,6 @@ package com.example.practica15;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,7 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView textView;
+    TextView textView, textView2;
+    NumeroAleatorio numeroAleatorio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.textView);
-        textView.setText("MiServicio detenido");
+        textView2 = findViewById(R.id.textView2);
+        numeroAleatorio = new NumeroAleatorio();
     }
 
     public void onClickIniciar(View view) {
@@ -32,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MiServicio.class);
         stopService(intent);
         textView.setText("MiServicio detenido");
+    }
+
+    public void onClickObtenerNumero(View view) {
+        textView2.setText(String.valueOf(numeroAleatorio.get()));
     }
 
     @Override

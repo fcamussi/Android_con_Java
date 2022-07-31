@@ -8,31 +8,32 @@ import android.util.Log;
 public class MiServicio extends Service {
 
     String TAG = "MiServicio";
-
-    private Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-            Log.d(TAG, "me inicié");
-            while (true) {
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                Log.d(TAG, "Hola! Soy " + this);
-            }
-        }
-    };
-
-    public MiServicio() {
-        Log.d(TAG, "Constructor");
-    }
+    NumeroAleatorio numeroAleatorio = new NumeroAleatorio();
+    static Thread thread;
 
     @Override
     public void onCreate() {
         super.onCreate();
         Log.d(TAG, "onCreate");
-        new Thread(runnable).start();
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    while (true) {
+                        numeroAleatorio.generar();
+                        Log.d(TAG, thread + " número aleatorio generado: " + numeroAleatorio.get());
+                        Thread.sleep(1000);
+                        if (Thread.currentThread().isInterrupted()) {
+                            throw new InterruptedException();
+                        }
+                    }
+                } catch (InterruptedException e) {
+                    Log.d(TAG, thread + " INTERRUMPIDO!");
+                }
+            }
+        };
+        thread = new Thread(runnable);
+        thread.start();
     }
 
     @Override
@@ -45,6 +46,7 @@ public class MiServicio extends Service {
     public void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy");
+        thread.interrupt();
     }
 
     @Override
