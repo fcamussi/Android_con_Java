@@ -4,11 +4,11 @@ public class NumeroAleatorio {
 
     static int numero;
 
-    public void generar() {
+    public static void generar() {
         numero = (int)(Math.random()*1000+1);
     }
 
-    public int get() {
+    public static int get() {
         return numero;
     }
 

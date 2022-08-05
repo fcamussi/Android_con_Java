@@ -8,7 +8,6 @@ import android.util.Log;
 public class MiServicio extends Service {
 
     String TAG = "MiServicio";
-    NumeroAleatorio numeroAleatorio = new NumeroAleatorio();
     static Thread thread;
 
     @Override
@@ -20,8 +19,8 @@ public class MiServicio extends Service {
             public void run() {
                 try {
                     while (true) {
-                        numeroAleatorio.generar();
-                        Log.d(TAG, thread + " número aleatorio generado: " + numeroAleatorio.get());
+                        NumeroAleatorio.generar();
+                        Log.d(TAG, thread + " número aleatorio generado: " + NumeroAleatorio.get());
                         Thread.sleep(1000);
                         if (Thread.currentThread().isInterrupted()) {
                             throw new InterruptedException();

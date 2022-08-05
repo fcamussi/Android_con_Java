@@ -11,7 +11,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     TextView textView, textView2;
-    NumeroAleatorio numeroAleatorio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.textView);
         textView2 = findViewById(R.id.textView2);
-        numeroAleatorio = new NumeroAleatorio();
     }
 
     public void onClickIniciar(View view) {
@@ -36,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickObtenerNumero(View view) {
-        textView2.setText(String.valueOf(numeroAleatorio.get()));
+        textView2.setText(String.valueOf(NumeroAleatorio.get()));
     }
 
     @Override
