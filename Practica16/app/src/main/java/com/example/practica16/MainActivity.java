@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         tv2 = findViewById(R.id.textView2);
     }
 
-    public void IniciarTrabajoOnClick(View view) {
+    public void iniciarTrabajoOnClick(View view) {
         WorkRequest uploadWorkRequest = new OneTimeWorkRequest.Builder(MiWorker.class).build();
         WorkManager.getInstance(this).enqueue(uploadWorkRequest);
     }

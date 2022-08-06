@@ -15,7 +15,6 @@ public class MiWorker extends Worker {
     @Override
     public Result doWork() {
         NumeroAleatorio.generar();
-
         return Result.success();
     }
 
