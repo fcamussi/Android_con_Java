@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void iniciarTrabajoOnClick(View view) {
-        WorkRequest uploadWorkRequest = new OneTimeWorkRequest.Builder(MiWorker.class).build();
-        WorkManager.getInstance(this).enqueue(uploadWorkRequest);
+        WorkRequest MiWorkRequest = new OneTimeWorkRequest.Builder(MiWorker.class).build();
+        WorkManager.getInstance(this).enqueue(MiWorkRequest);
     }
 
     public void obtenerNumeroOnClick(View view) {
