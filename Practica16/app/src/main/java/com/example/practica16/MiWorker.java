@@ -20,6 +20,7 @@ public class MiWorker extends Worker {
         NumeroAleatorio.generar();
         Intent intent = new Intent(NOTIFICATION);
         intent.putExtra("data", String.valueOf(NumeroAleatorio.get()));
+        intent.setPackage(getApplicationContext().getPackageName()); // para que solo ésta aplicación lo pueda recibir
         getApplicationContext().sendBroadcast(intent);
         return Result.success();
     }
