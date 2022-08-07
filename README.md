@@ -53,6 +53,6 @@
 ## Práctica 15: Service
 ![screenshot15](https://user-images.githubusercontent.com/75378876/182012996-44ee1108-4a23-47f6-905b-8e920bdd51bd.png)
 
-## Práctica 16: Worker, WorkRequest, WorkManager
-![screenshot16](https://user-images.githubusercontent.com/75378876/183227339-5fb86034-ed09-4377-8cf2-f1d2933a7726.png)
+## Práctica 16: Worker, BroadcastReceiver
+![screenshot16](https://user-images.githubusercontent.com/75378876/183314678-20fb7d6e-76b7-4aed-bdb4-de6203a13637.png)
 
