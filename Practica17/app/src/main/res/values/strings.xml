@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Practica17</string>
+    <string name="modelo">Modelo</string>
+    <string name="marca">Marca</string>
+    <string name="modelo_">Modelo:</string>
+    <string name="marca_">Marca:</string>
+</resources>
