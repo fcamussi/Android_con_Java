@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -44,8 +45,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickAgregar(View view) {
-        Color color = new Color(et.getText().toString());
-        adapter.add(color);
+        if (et.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Ingrese un color", Toast.LENGTH_SHORT).show();
+        } else {
+            Color color = new Color(et.getText().toString());
+            adapter.add(color);
+            et.setText("");
+        }
     }
 
 }
