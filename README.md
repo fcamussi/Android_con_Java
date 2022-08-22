@@ -56,5 +56,5 @@
 ## Práctica 16: Worker, BroadcastReceiver
 ![screenshot16](https://user-images.githubusercontent.com/75378876/183314678-20fb7d6e-76b7-4aed-bdb4-de6203a13637.png)
 
-## Práctica 17: OnItemLongClickListener, seleccionar/deseleccionar items
+## Práctica 17: OnItemLongClickListener, seleccionar/deseleccionar items, modo nocturno
 ![screenshot17](https://user-images.githubusercontent.com/75378876/185788331-685a55e1-f03e-4f0f-b51b-8d95a91ae979.png)
