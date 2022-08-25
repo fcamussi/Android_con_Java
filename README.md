@@ -58,3 +58,7 @@
 
 ## Práctica 17: OnItemLongClickListener, activate/desactivate Views
 ![screenshot17](https://user-images.githubusercontent.com/75378876/185788331-685a55e1-f03e-4f0f-b51b-8d95a91ae979.png)
+
+## Práctica 18: ExecutorService, Handler, Runnable, InputStream, BitmapFactory
+![screenshot18](https://user-images.githubusercontent.com/75378876/186726789-d1332ed8-fcb5-4938-97ba-454c1d675e90.png)
+
