@@ -62,3 +62,5 @@
 ## Práctica 18: ExecutorService, Handler, InputStream, BitmapFactory
 ![screenshot18](https://user-images.githubusercontent.com/75378876/186726789-d1332ed8-fcb5-4938-97ba-454c1d675e90.png)
 
+## Práctica 19: NotificationCompat, PendingIntent, NotificationManagerCompat, NotificationChannel
+![screenshot19](https://user-images.githubusercontent.com/75378876/186853644-0cb0b4db-cfc9-4524-b092-4843d3914333.png)
