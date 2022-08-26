@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
                 try (InputStream in = new URL(tuxImageUrl).openStream()) {
                     bitmap = BitmapFactory.decodeStream(in);
                 } catch (Exception e) {
-                    e.printStackTrace();
                 }
                 handler.post(new Runnable() {
                     @Override
