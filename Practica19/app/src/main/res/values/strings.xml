@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Practica19</string>
+    <string name="channel_name">Practica19</string>
+    <string name="channel_description">Practica19_NotificationChannel</string>
+</resources>
