@@ -10,7 +10,6 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.concurrent.ExecutorService;
@@ -33,25 +32,18 @@ public class MainActivity extends AppCompatActivity {
         Handler handler = new Handler(Looper.getMainLooper());
         imageView = findViewById(R.id.imageView);
 
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    InputStream in = new URL(tuxImageUrl).openStream();
-                    bitmap = BitmapFactory.decodeStream(in);
-                    in.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (bitmap != null) {
-                            imageView.setImageBitmap(bitmap);
-                        }
-                    }
-                });
+        executor.execute(() -> {
+            try {
+                InputStream in = new URL(tuxImageUrl).openStream();
+                bitmap = BitmapFactory.decodeStream(in);
+                in.close();
+            } catch (Exception ignored) {
             }
+            handler.post(() -> {
+                if (bitmap != null) {
+                    imageView.setImageBitmap(bitmap);
+                }
+            });
         });
     }
 
