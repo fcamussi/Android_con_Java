@@ -1,7 +1,5 @@
 package com.example.practica18;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -10,6 +8,9 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.concurrent.ExecutorService;
@@ -35,9 +36,12 @@ public class MainActivity extends AppCompatActivity {
         executor.execute(new Runnable() {
             @Override
             public void run() {
-                try (InputStream in = new URL(tuxImageUrl).openStream()) {
+                try {
+                    InputStream in = new URL(tuxImageUrl).openStream();
                     bitmap = BitmapFactory.decodeStream(in);
-                } catch (Exception e) {
+                    in.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
                 handler.post(new Runnable() {
                     @Override
@@ -49,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-
     }
 
 }
